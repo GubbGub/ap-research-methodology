@@ -49,7 +49,7 @@ style: |
 # Methodologies Under Review
 ## Content Analysis & Experimental Research
 
-![width:160px](https://qrserver.com)
+<img src="https://qrserver.com" width="160" />
 
 ###### Scan to view live interactive slides
 
