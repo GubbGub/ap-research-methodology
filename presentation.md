@@ -49,9 +49,9 @@ style: |
 # Methodologies Under Review
 ## Content Analysis & Experimental Research
 
-![width:140px](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://://github.com&color=ffffff&bgcolor=000000)
+![width:160px](https://qrserver.com)
 
-###### Scan to view source code on GitHub
+###### Scan to view live interactive slides
 
 By Jared Bridgewater
 
