@@ -53,10 +53,7 @@ style: |
 
 ###### Scan to view source code on GitHub
 
-
-# Methodologies Under Review
-## Content Analysis & Experimental Research
-AP Research Framework // System Architecture Lesson
+By Jared Bridgewater
 
 ---
 
