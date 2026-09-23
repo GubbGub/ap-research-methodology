@@ -2,7 +2,7 @@ name: Deploy Marp Slides to Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -19,7 +19,7 @@ jobs:
       - name: Compile Marp Markdown to HTML
         uses: KoharaKazuya/marp-cli-action@v4
         with:
-          args: Presentation.md -o index.html
+          args: presentation.md -o index.html
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
