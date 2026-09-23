@@ -19,7 +19,7 @@ jobs:
       - name: Compile Marp Markdown to HTML
         uses: KoharaKazuya/marp-cli-action@v3
         with:
-          args: presentation.md -o index.html
+          args: Presentation.md -o index.html
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
