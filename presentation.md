@@ -5,7 +5,7 @@ _class: lead
 paginate: true
 backgroundColor: #000000
 color: #ffffff
-footer: '://github.com'
+footer: 'https://github.com/GubbGub/ap-research-methodology'
 style: |
   section {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -49,9 +49,11 @@ style: |
 # Methodologies Under Review
 ## Content Analysis & Experimental Research
 
-<img src="https://qrserver.com" width="160" />
+<div style="text-align: center;">
+  <img src="qrcode.png" width="160" />
+</div>
 
-###### Scan to view live interactive slides
+###### Scan to view source code on GitHub
 
 By Jared Bridgewater
 
@@ -143,4 +145,4 @@ def run_controlled_experiment(population_pool):
 
 # Questions & Discussion
 ## Slides generated programmatically via Marp (Markdown)
-Source code available at: **://github.com**
+Source code available at: **https://github.com/GubbGub/ap-research-methodology**
