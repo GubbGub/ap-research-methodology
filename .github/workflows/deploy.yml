@@ -16,10 +16,10 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Compile Presentation to Index HTML
+      - name: Compile presentation to Index HTML
         uses: KoharaKazuya/marp-cli-action@v4
         env:
-          MARP_ARGS: Presentation.md -o index.html
+          MARP_ARGS: presentation.md -o index.html
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
