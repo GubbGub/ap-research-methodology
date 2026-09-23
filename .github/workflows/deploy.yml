@@ -2,7 +2,7 @@ name: Deploy Marp Slides to Pages
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -16,10 +16,10 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Compile Marp Markdown to HTML
+      - name: Compile Presentation to Index HTML
         uses: KoharaKazuya/marp-cli-action@v4
-        with:
-          args: presentation.md -o index.html
+        env:
+          MARP_ARGS: Presentation.md -o index.html
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
