@@ -48,10 +48,10 @@ style: |
 
 # Methodologies Under Review
 ## Content Analysis & Experimental Research
-
-<div style="text-align: center;">
+# 
+<center>
   <img src="qrcode.png" width="160" />
-</div>
+</center>
 
 ###### Scan to view source code on GitHub
 
