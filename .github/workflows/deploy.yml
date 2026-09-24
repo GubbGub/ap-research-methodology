@@ -16,12 +16,8 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Compile presentation to Index HTML
-        uses: KoharaKazuya/marp-cli-action@v4
-        with:
-          args: presentation.md -o index.html
-          generate-html: false
-          generate-pdf: false
+      - name: Compile presentation to index.html
+        run: npx -y @marp-team/marp-cli@latest presentation.md -o index.html --allow-local-files
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
