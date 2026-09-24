@@ -20,6 +20,8 @@ jobs:
         uses: KoharaKazuya/marp-cli-action@v4
         with:
           args: presentation.md -o index.html
+          generate-html: false
+          generate-pdf: false
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
