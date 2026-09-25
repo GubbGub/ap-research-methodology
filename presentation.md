@@ -44,6 +44,11 @@ style: |
     color: #e5e5e5;
     border: 1px solid #262626;
   }
+  section.chart img {
+    display: block;
+    margin: 10px auto 0 auto;
+    max-height: 480px;
+  }
 ---
 
 # Methodologies Under Review
@@ -81,13 +86,24 @@ To execute this rigorously, researchers follow a deterministic data pipeline:
 ---
 
 # Content Analysis: Case Study
-## Empirical Evaluation of Code Comment Quality
+## Quality Analysis of Source Code Comments (Steidl et al., 2013)
 
 * **The Problem:** Software maintenance accounts for up to 80% of total software costs; bad documentation kills velocity.
-* **The Methodology:** 
-  * Researchers collected thousands of source code comments.
-  * Used **Content Analysis** to manually categorize comments into distinct operational definitions (e.g., *Summary, Technical Debt indication, Bug workaround*).
-  * Calculated frequency metrics to correlate comment quality with total software bugs.
+* **The Methodology:**
+  * Researchers built a 7-category codebook (copyright, header, member, inline, section, task, commented-out code).
+  * Used a **Java + C/C++ machine-learning classifier**, trained on 830 hand-tagged comments, to categorize real open-source repositories.
+  * Case study applied this codebook to 5 open-source Java projects (jMol, ConQAT, jEdit, voTUM, JUNG).
+
+---
+
+<!-- _class: chart -->
+
+# Content Analysis: Quantitative Findings
+## Structural Breakdown of Repository Documentation
+
+![Comment category distribution](content_analysis_chart.png)
+
+###### Same "comment ratio" (38% vs 33%) hides very different documentation profiles — classification reveals *what kind* of commenting each project relies on.
 
 ---
 
@@ -103,7 +119,7 @@ Unlike Content Analysis which observes existing data, **Experimental Research** 
 
 # Experimental Research: Architecture
 
-```python
+\`\`\`python
 # Algorithmic Representation of an Experimental Design
 def run_controlled_experiment(population_pool):
     # Step 1: Strict Random Assignment (Eliminates Bias)
@@ -115,19 +131,30 @@ def run_controlled_experiment(population_pool):
     
     # Step 3: Evaluate Statistical Significance (e.g., p-value < 0.05)
     return run_t_test(metrics_A, metrics_B)
-```
+\`\`\`
 
 ---
 
 # Experimental Research: Case Study
-## The Impact of GitHub Copilot on Developer Productivity
+## The Impact of GitHub Copilot on Developer Productivity (Peng et al., 2023)
 
 * **The Problem:** Quantifying whether LLM pair-programmers actually increase velocity or just introduce errors.
 * **The Methodology:**
-  * **Participants:** 95 professional developers randomly split into two groups.
+  * **Participants:** 95 developers randomly split — 45 treated, 50 control.
   * **Control Group:** Implemented an HTTP server in JavaScript *without* Copilot.
   * **Experimental Group:** Implemented the exact same server *with* Copilot enabled.
-  * **Results:** The experimental group completed the task **55.8% faster** (a strictly quantitative dependent variable).
+  * **Results:** The experimental group completed the task **55.8% faster** (71.2 min vs. 160.9 min, *p* = 0.0017).
+
+---
+
+<!-- _class: chart -->
+
+# Experimental Research: Visualizing Causal Inference
+## Distribution of Task Completion Times
+
+![Task completion time distributions](experimental_chart.png)
+
+###### Independent variable ($X$ = Copilot access) shifts the entire distribution of the dependent variable ($Y$ = completion time), not just the mean.
 
 ---
 
