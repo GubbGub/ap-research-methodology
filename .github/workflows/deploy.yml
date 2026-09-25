@@ -16,13 +16,16 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Compile presentation to index.html
-        run: npx -y @marp-team/marp-cli@latest presentation.md -o index.html --allow-local-files
+      - name: Compile presentation to site/index.html
+        run: |
+          mkdir -p site
+          cp qrcode.png content_analysis_chart.png experimental_chart.png site/
+          npx -y @marp-team/marp-cli@latest presentation.md -o site/index.html --allow-local-files
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
