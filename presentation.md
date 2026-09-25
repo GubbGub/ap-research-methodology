@@ -13,6 +13,26 @@ style: |
     font-size: 28px;
     padding: 40px 60px;
   }
+  section.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  section.cover h1,
+  section.cover h2,
+  section.cover h6,
+  section.cover p,
+  section.cover center {
+    width: 100%;
+    text-align: center;
+  }
+  section.cover img {
+    width: 280px;
+    margin-top: 26px;
+    margin-bottom: 8px;
+  }
   h1 {
     color: #ffffff;
     font-weight: 800;
@@ -63,16 +83,17 @@ style: |
   }
 ---
 
+<!-- _class: cover -->
 # Methodologies Under Review
 ## Content Analysis & Experimental Research
-# 
+
 <center>
-  <img src="qrcode.png" width="220" />
+  <img src="qrcode.png" width="260" />
 </center>
 
 ###### Scan to view source code on GitHub
 
-By Jared Bridgewater
+###### By Jared Bridgewater
 
 ---
 
