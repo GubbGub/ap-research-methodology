@@ -1,5 +1,6 @@
 ---
 marp: true
+math: mathjax
 theme: gaia
 _class: lead
 paginate: true
@@ -34,20 +35,31 @@ style: |
     color: #404040;
     font-size: 16px;
   }
+  pre {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid #38bdf8;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 14px 16px;
+    margin: 0;
+  }
   code {
-    background: #171717;
+    background: transparent;
     color: #f43f5e;
     font-family: 'Fira Code', monospace;
   }
   pre code {
-    background: #0a0a0a;
+    background: transparent;
     color: #e5e5e5;
-    border: 1px solid #262626;
+    border: none;
+    padding: 0;
+    box-shadow: none;
   }
   section.chart img {
     display: block;
-    margin: 10px auto 0 auto;
-    max-height: 480px;
+    margin: -10px auto 0 auto;
+    max-height: 440px;
   }
 ---
 
@@ -119,8 +131,9 @@ Unlike Content Analysis which observes existing data, **Experimental Research** 
 
 # Experimental Research: Architecture
 
-\`\`\`python
-# Algorithmic Representation of an Experimental Design
+## Algorithmic Representation of an Experimental Design
+#
+```python
 def run_controlled_experiment(population_pool):
     # Step 1: Strict Random Assignment (Eliminates Bias)
     group_A, group_B = random_split(population_pool)
@@ -131,7 +144,9 @@ def run_controlled_experiment(population_pool):
     
     # Step 3: Evaluate Statistical Significance (e.g., p-value < 0.05)
     return run_t_test(metrics_A, metrics_B)
-\`\`\`
+```
+
+*In plain English:* Randomly split people into two groups, give one group the treatment, and compare their outcomes to see whether the difference is truly meaningful rather than just random noise.
 
 ---
 
@@ -150,6 +165,7 @@ def run_controlled_experiment(population_pool):
 <!-- _class: chart -->
 
 # Experimental Research: Visualizing Causal Inference
+
 ## Distribution of Task Completion Times
 
 ![Task completion time distributions](experimental_chart.png)
