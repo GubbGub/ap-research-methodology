@@ -78,8 +78,33 @@ style: |
   }
   section.chart img {
     display: block;
-    margin: -10px auto 0 auto;
-    max-height: 440px;
+    margin: 0 auto;
+    max-height: 98vh;
+    max-width: 98%;
+    padding: 0;
+  }
+  section.chart {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+    section.cites h1 {
+    margin-bottom: 30px;
+  }
+  section.cites p {
+    font-size: 22px;
+    line-height: 1.55;
+    color: #d4d4d4;
+    text-indent: -1.4em;
+    padding-left: 1.4em;
+    margin: 0 0 22px 0;
+  }
+  section.chart h1,
+  section.chart h2,
+  section.chart h6 {
+    display: none;
   }
 ---
 
@@ -99,6 +124,8 @@ style: |
 
 # Content Analysis: Overview
 ## Parsing Human Artifacts as Data
+
+Two philosophies for turning observation into evidence — starting with the one that looks backward.
 
 Content Analysis is a systematic, replicable technique for compressing many words of text into fewer content categories based on explicit rules of coding.
 
@@ -126,6 +153,7 @@ To execute this rigorously, researchers follow a deterministic data pipeline:
   * Researchers built a 7-category codebook (copyright, header, member, inline, section, task, commented-out code).
   * Used a **Java + C/C++ machine-learning classifier**, trained on 830 hand-tagged comments, to categorize real open-source repositories.
   * Case study applied this codebook to 5 open-source Java projects (jMol, ConQAT, jEdit, voTUM, JUNG).
+* **The Result:** The simple comment ratio alone ranked ConQAT the "best documented" project — classification reveals *why* that's misleading.
 
 ---
 
@@ -136,7 +164,7 @@ To execute this rigorously, researchers follow a deterministic data pipeline:
 
 ![Comment category distribution](content_analysis_chart.png)
 
-###### Same "comment ratio" (38% vs 33%) hides very different documentation profiles — classification reveals *what kind* of commenting each project relies on.
+###### A pattern, not a cause: same overall comment ratio, completely different documentation profiles.
 
 ---
 
@@ -179,7 +207,7 @@ def run_controlled_experiment(population_pool):
   * **Participants:** 95 developers randomly split — 45 treated, 50 control.
   * **Control Group:** Implemented an HTTP server in JavaScript *without* Copilot.
   * **Experimental Group:** Implemented the exact same server *with* Copilot enabled.
-  * **Results:** The experimental group completed the task **55.8% faster** (71.2 min vs. 160.9 min, *p* = 0.0017).
+* **The Result:** The experimental group completed the task **55.8% faster** (71.2 min vs. 160.9 min, *p* = 0.0017).
 
 ---
 
@@ -197,12 +225,23 @@ def run_controlled_experiment(population_pool):
 
 # Methodological Synthesis
 
+Both case studies above reduced messy reality to a number — here's how they got there differently:
+
 | Feature | Content Analysis | Experimental Research |
 | :--- | :--- | :--- |
 | **Objective** | Uncover patterns in communication. | Establish causal links ($X \rightarrow Y$). |
 | **Data Source** | Existing artifacts (Static). | Generated via trial (Dynamic). |
 | **Manipulation** | **None.** Observational only. | **High.** Active intervention. |
 | **Core Risk** | Subjective coding bias. | Confounding environmental variables. |
+---
+
+<!-- _class: cites -->
+
+# Works Cited
+
+Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. *arXiv*. https://doi.org/10.48550/arXiv.2302.06590
+
+Steidl, D., Hummel, B., & Jürgens, E. (2013). Quality analysis of source code comments. In *2013 IEEE 21st International Conference on Program Comprehension (ICPC)* (pp. 83–92). IEEE. https://doi.org/10.1109/ICPC.2013.6613836
 
 ---
 <!-- _class: lead -->
