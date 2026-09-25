@@ -67,7 +67,7 @@ style: |
 ## Content Analysis & Experimental Research
 # 
 <center>
-  <img src="qrcode.png" width="160" />
+  <img src="qrcode.png" width="220" />
 </center>
 
 ###### Scan to view source code on GitHub
