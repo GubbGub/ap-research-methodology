@@ -90,7 +90,12 @@ style: |
     justify-content: center;
     align-items: center;
   }
-    section.cites h1 {
+  section.chart h1,
+  section.chart h2,
+  section.chart h6 {
+    display: none;
+  }
+  section.cites h1 {
     margin-bottom: 30px;
   }
   section.cites p {
@@ -101,10 +106,14 @@ style: |
     padding-left: 1.4em;
     margin: 0 0 22px 0;
   }
-  section.chart h1,
-  section.chart h2,
-  section.chart h6 {
-    display: none;
+  section.cites .disclosure {
+    text-indent: 0;
+    padding-left: 0;
+    font-size: 18px;
+    color: #737373;
+    margin-top: 34px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 ---
 
@@ -233,6 +242,7 @@ Both case studies above reduced messy reality to a number — here's how they go
 | **Data Source** | Existing artifacts (Static). | Generated via trial (Dynamic). |
 | **Manipulation** | **None.** Observational only. | **High.** Active intervention. |
 | **Core Risk** | Subjective coding bias. | Confounding environmental variables. |
+
 ---
 
 <!-- _class: cites -->
@@ -243,9 +253,6 @@ Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on
 
 Steidl, D., Hummel, B., & Jürgens, E. (2013). Quality analysis of source code comments. In *2013 IEEE 21st International Conference on Program Comprehension (ICPC)* (pp. 83–92). IEEE. https://doi.org/10.1109/ICPC.2013.6613836
 
----
-<!-- _class: lead -->
+Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai
 
-# Questions & Discussion
-## Slides generated programmatically via Marp (Markdown)
-Source code available at: **https://github.com/GubbGub/ap-research-methodology**
+<p class="disclosure"><em>Claude assisted in generating the data-visualization code and chart styling for the two
