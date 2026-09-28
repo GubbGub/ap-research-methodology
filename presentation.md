@@ -121,13 +121,13 @@ style: |
 <!-- _class: cover -->
 # Methodologies Under Review
 ## Content Analysis & Experimental Research
+###### By Jared Bridgewater
 
 <center>
   <img src="qrcode.png" width="260" />
 </center>
-###### Scan to view source code on GitHub
 
-By Jared Bridgewater
+###### Scan to view source code on GitHub
 
 ---
 
@@ -247,11 +247,15 @@ Both case studies above reduced messy reality to a number — here's how they go
 
 <!-- _class: cites -->
 
-# Works Cited
+# Works Cited / References
+
+Columbia University Mailman School of Public Health. (n.d.). Content analysis. Population Health Methods. https://www.publichealth.columbia.edu/research/population-health-methods/content-analysis
 
 Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. *arXiv*. https://doi.org/10.48550/arXiv.2302.06590
 
 Steidl, D., Hummel, B., & Jürgens, E. (2013). Quality analysis of source code comments. In *2013 IEEE 21st International Conference on Program Comprehension (ICPC)* (pp. 83–92). IEEE. https://doi.org/10.1109/ICPC.2013.6613836
+
+Zubair, A. (2023). Experimental research design-types & process. *Academia Open*.
 
 ---
 <!-- _class: lead -->
