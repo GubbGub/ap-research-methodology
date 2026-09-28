@@ -49,6 +49,7 @@ style: |
   }
   strong {
     color: #38bdf8;
+    
   }
   footer {
     font-family: 'Fira Code', monospace;
@@ -83,6 +84,15 @@ style: |
     max-width: 98%;
     padding: 0;
   }
+  section.cites .disclosure {
+    text-indent: 0;
+    padding-left: 0;
+    font-size: 18px;
+    color: #737373;
+    margin-top: 34px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
   section.chart {
     padding: 0;
     display: flex;
@@ -90,12 +100,7 @@ style: |
     justify-content: center;
     align-items: center;
   }
-  section.chart h1,
-  section.chart h2,
-  section.chart h6 {
-    display: none;
-  }
-  section.cites h1 {
+    section.cites h1 {
     margin-bottom: 30px;
   }
   section.cites p {
@@ -106,14 +111,10 @@ style: |
     padding-left: 1.4em;
     margin: 0 0 22px 0;
   }
-  section.cites .disclosure {
-    text-indent: 0;
-    padding-left: 0;
-    font-size: 18px;
-    color: #737373;
-    margin-top: 34px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  section.chart h1,
+  section.chart h2,
+  section.chart h6 {
+    display: none;
   }
 ---
 
@@ -124,10 +125,9 @@ style: |
 <center>
   <img src="qrcode.png" width="260" />
 </center>
-
 ###### Scan to view source code on GitHub
 
-###### By Jared Bridgewater
+By Jared Bridgewater
 
 ---
 
@@ -190,7 +190,7 @@ Unlike Content Analysis which observes existing data, **Experimental Research** 
 # Experimental Research: Architecture
 
 ## Algorithmic Representation of an Experimental Design
-#
+
 ```python
 def run_controlled_experiment(population_pool):
     # Step 1: Strict Random Assignment (Eliminates Bias)
@@ -253,6 +253,9 @@ Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on
 
 Steidl, D., Hummel, B., & Jürgens, E. (2013). Quality analysis of source code comments. In *2013 IEEE 21st International Conference on Program Comprehension (ICPC)* (pp. 83–92). IEEE. https://doi.org/10.1109/ICPC.2013.6613836
 
-Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai
+---
+<!-- _class: lead -->
 
-<p class="disclosure"><em>Claude assisted in generating the data-visualization code and chart styling for the two
+# Questions & Discussion
+## Slides generated programmatically via Marp (Markdown)
+Source code available at: **https://github.com/GubbGub/ap-research-methodology**
